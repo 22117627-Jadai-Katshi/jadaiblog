@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tag2 on Kyson Dana | Designer &amp; Storyteller</title>
-    <link>https://example.com/tags/tag2/</link>
+    <link>https://my.jadaikongolo.tech/tags/tag2/</link>
     <description>Recent content in Tag2 on Kyson Dana | Designer &amp; Storyteller</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 06 Nov 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.com/tags/tag2/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://my.jadaikongolo.tech/tags/tag2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My insan blog Pipeline</title>
-      <link>https://example.com/projects/my-insande-blog-pipeline/</link>
+      <link>https://my.jadaikongolo.tech/projects/my-insande-blog-pipeline/</link>
       <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.com/projects/my-insande-blog-pipeline/</guid>
+      <guid>https://my.jadaikongolo.tech/projects/my-insande-blog-pipeline/</guid>
       <description>&lt;h1 id=&#34;my-insane-blog-pipeline&#34;&gt;&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/&#34;&gt;My Insane Blog Pipeline&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;p&gt;2024-11-15&lt;/p&gt;&#xA;&lt;p&gt;#&lt;a href=&#34;https://blog.networkchuck.com/tags/networkchuck/&#34;&gt;networkchuck&lt;/a&gt;  #&lt;a href=&#34;https://blog.networkchuck.com/tags/blog/&#34;&gt;blog&lt;/a&gt; &lt;/p&gt;&#xA;&lt;h1 id=&#34;obsidian---why-i-love-it&#34;&gt;Obsidian - Why I love it&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#obsidian---why-i-love-it&#34;&gt;&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Obsidian is the BEST notes application in the world. Go download it: &lt;a href=&#34;https://obsidian.md/&#34;&gt;https://obsidian.md/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;the-setup&#34;&gt;The Setup&lt;a href=&#34;https://blog.networkchuck.com/posts/my-insane-blog-pipeline/#the-setup&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Create a new folder labeled &lt;em&gt;posts&lt;/em&gt;. This is where you will add your blog posts&lt;/li&gt;&#xA;&lt;li&gt;….that’s all you have to do&lt;/li&gt;&#xA;&lt;li&gt;Actually…wait….find out where your Obsidian directories are. Right click your &lt;em&gt;posts&lt;/em&gt; folder and choose &lt;em&gt;show in system explorer&lt;/em&gt;&lt;/li&gt;&#xA;&lt;li&gt;You’ll need this directory in upcoming steps.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;!&lt;/p&gt;</description>
     </item>
   </channel>

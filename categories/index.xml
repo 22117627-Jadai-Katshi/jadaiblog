@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Kyson Dana | Designer &amp; Storyteller</title>
-    <link>https://example.com/categories/</link>
+    <link>https://my.jadaikongolo.tech/categories/</link>
     <description>Recent content in Categories on Kyson Dana | Designer &amp; Storyteller</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 04 Apr 2022 05:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://my.jadaikongolo.tech/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Application</title>
-      <link>https://example.com/categories/application/</link>
+      <link>https://my.jadaikongolo.tech/categories/application/</link>
       <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
-      <guid>https://example.com/categories/application/</guid>
+      <guid>https://my.jadaikongolo.tech/categories/application/</guid>
       <description></description>
     </item>
     <item>
       <title>Architecture</title>
-      <link>https://example.com/categories/architecture/</link>
+      <link>https://my.jadaikongolo.tech/categories/architecture/</link>
       <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
-      <guid>https://example.com/categories/architecture/</guid>
+      <guid>https://my.jadaikongolo.tech/categories/architecture/</guid>
       <description></description>
     </item>
     <item>
       <title>Data</title>
-      <link>https://example.com/categories/data/</link>
+      <link>https://my.jadaikongolo.tech/categories/data/</link>
       <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
-      <guid>https://example.com/categories/data/</guid>
+      <guid>https://my.jadaikongolo.tech/categories/data/</guid>
       <description></description>
     </item>
     <item>
       <title>Software</title>
-      <link>https://example.com/categories/software/</link>
+      <link>https://my.jadaikongolo.tech/categories/software/</link>
       <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
-      <guid>https://example.com/categories/software/</guid>
+      <guid>https://my.jadaikongolo.tech/categories/software/</guid>
       <description></description>
     </item>
     <item>
       <title>Technology</title>
-      <link>https://example.com/categories/technology/</link>
+      <link>https://my.jadaikongolo.tech/categories/technology/</link>
       <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
-      <guid>https://example.com/categories/technology/</guid>
+      <guid>https://my.jadaikongolo.tech/categories/technology/</guid>
       <description></description>
     </item>
   </channel>
