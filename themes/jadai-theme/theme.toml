@@ -1,0 +1,9 @@
+name = "Jadai Theme"
+license = "MIT"
+description = "A portfolio theme for Jadai Dana"
+tags = ["portfolio", "responsive"]
+features = ["responsive"]
+
+[author]
+  name = "Jadai Dana"
+  homepage = "https://jadai.example.com"

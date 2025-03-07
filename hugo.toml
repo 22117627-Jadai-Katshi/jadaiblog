@@ -1,0 +1,31 @@
+baseURL = "https://example.com"
+languageCode = "en-us"
+title = "Kyson Dana | Designer & Storyteller"
+#theme = "jadai-theme"
+
+[menu]
+  [[menu.main]]
+    name = "Digital Design"
+    url = "/digital-design/"
+    weight = 1
+  
+  [[menu.main]]
+    name = "Brand Design"
+    url = "/brand-design/"
+    weight = 2
+  
+  [[menu.main]]
+    name = "Art Direction"
+    url = "/art-direction/"
+    weight = 3
+  
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 4
+
+[params]
+  description = "Kyson is a designer who loves to tell a good story."
+  email = "kyson@example.com"
+  linkedin = "https://linkedin.com/in/kysondana"
+  instagram = "https://instagram.com/kysondana"

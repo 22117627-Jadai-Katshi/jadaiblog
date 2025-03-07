@@ -1,0 +1,154 @@
+{{ define "main" }}
+<div class="services-page">
+    <!-- Video Header -->
+    <section class="services-hero">
+        <video autoplay muted loop playsinline poster="{{ .Params.video_poster }}">
+            <source src="{{ .Params.video }}" type="video/mp4">
+        </video>
+        <div class="services-hero__overlay">
+            <div class="container">
+                <div class="services-hero__content">
+                    <div class="services-hero__text">
+                        <h1 class="services-hero__headline">{{ .Params.headline }}</h1>
+                        <p class="services-hero__subtext">{{ .Params.subtext }}</p>
+                    </div>
+                    <div class="services-hero__cta">
+                        <a href="#how-it-works" class="link-text">{{ .Params.learn_cta }}</a>
+                        <a href="#pricing" class="btn-primary">{{ .Params.pricing_cta }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: How it Works -->
+    <section id="how-it-works" class="services-section services-section--how scroll-animate fade-up">
+        <div class="container">
+            <h2 class="services-section__title scroll-animate-child">{{ .Params.section1.title }}</h2>
+            <div class="services-cards">
+                {{ range $index, $card := .Params.section1.cards }}
+                <div class="services-card services-card--{{ .color }} scroll-animate-child" style="transition-delay: {{ mul $index 0.1 }}s;">
+                    <div class="services-card__image">
+                        <img src="{{ .image }}" alt="{{ .title }}">
+                    </div>
+                    <h3 class="services-card__title">{{ .title }}</h3>
+                    <p class="services-card__description">{{ .description }}</p>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Better -->
+    <section class="services-section services-section--better scroll-animate fade-up">
+        <div class="container">
+            <h2 class="services-section__title animate fade-in">{{ .Params.section2.title }}</h2>
+            <p class="services-section__subtitle animate fade-in">{{ .Params.section2.subtext }}</p>
+            <div class="services-features">
+                {{ $delay := 1 }}
+                {{ range .Params.section2.features }}
+                <div class="services-feature animate slide-up delay-{{ $delay }}">
+                    <div class="services-feature__icon services-feature__icon--{{ .color }}">
+                        <i class="fa-solid fa-{{ .icon }}"></i>
+                    </div>
+                    <h3 class="services-feature__title">{{ .title }}</h3>
+                    <p class="services-feature__description">{{ .description }}</p>
+                </div>
+                {{ $delay = add $delay 1 }}
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Recent Work -->
+    <section class="services-section services-section--work scroll-animate fade-up">
+        <div class="container">
+            <h2 class="services-section__title animate fade-in">{{ .Params.section3.title }}</h2>
+            <div class="services-projects">
+                {{ $delay := 1 }}
+                {{ range .Params.section3.projects }}
+                <div class="services-project services-project--{{ .color }} animate slide-up delay-{{ $delay }}">
+                    <div class="services-project__image">
+                        <img src="{{ .image }}" alt="{{ .title }}">
+                    </div>
+                    <div class="services-project__content">
+                        <h3 class="services-project__title">{{ .title }}</h3>
+                        <p class="services-project__description">{{ .description }}</p>
+                        <a href="{{ .url }}" class="services-project__link">View work</a>
+                    </div>
+                </div>
+                {{ $delay = add $delay 1 }}
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Pricing -->
+    <section id="pricing" class="services-section services-section--pricing scroll-animate fade-up">
+        <div class="container">
+            <h2 class="services-section__title animate fade-in">{{ .Params.section4.title }}</h2>
+            <div class="services-pricing">
+                <div class="services-pricing__card animate slide-up delay-1">
+                    <div class="services-pricing__image">
+                        <img src="{{ .Params.section4.card.image }}" alt="Get Started">
+                    </div>
+                    <h3 class="services-pricing__card-title">{{ .Params.section4.card.title }}</h3>
+                    <a href="#" class="btn-primary">{{ .Params.section4.card.button }}</a>
+                </div>
+                <div class="services-pricing__plan animate slide-up delay-2">
+                    <h3 class="services-pricing__plan-title">{{ .Params.section4.pricing.title }}</h3>
+                    <ul class="services-pricing__features">
+                        {{ range .Params.section4.pricing.features }}
+                        <li>{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                    <a href="#" class="btn-outline">{{ .Params.section4.pricing.button }}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="services-section services-section--faq scroll-animate fade-up">
+        <div class="container">
+            <h2 class="services-section__title animate fade-in">Frequently asked questions</h2>
+            <div class="services-faq">
+                {{ $delay := 1 }}
+                {{ range .Params.faqs }}
+                <div class="services-faq__item animate slide-up delay-{{ $delay }}">
+                    <button class="services-faq__question">
+                        {{ .question }}
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="services-faq__answer">
+                        <p>{{ .answer }}</p>
+                    </div>
+                </div>
+                {{ $delay = add $delay 1 }}
+                {{ end }}
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Add FAQ toggle functionality -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.services-faq__question');
+    
+    faqItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const parent = item.parentElement;
+            parent.classList.toggle('is-active');
+            
+            // Close other items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.parentElement.classList.remove('is-active');
+                }
+            });
+        });
+    });
+});
+</script>
+{{ end }}

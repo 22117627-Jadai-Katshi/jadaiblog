@@ -1,0 +1,196 @@
+// Page transitions
+body {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    
+    &.page-loaded {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    &.page-transitioning {
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+}
+
+// Animation classes
+.animate {
+    opacity: 0;
+    transition-duration: 0.8s;
+    transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition-property: opacity, transform;
+    will-change: opacity, transform;
+    
+    &.animated {
+        opacity: 1;
+        transform: translate(0, 0) !important;
+    }
+    
+    // Failsafe: ensure elements become visible eventually
+    animation: forceVisible 0.1s 1.5s forwards;
+    
+    // Fade animations
+    &.fade-in {
+        opacity: 0;
+    }
+    
+    // Slide animations
+    &.slide-up {
+        transform: translateY(60px);
+    }
+    
+    &.slide-down {
+        transform: translateY(-60px);
+    }
+    
+    &.slide-left {
+        transform: translateX(60px);
+    }
+    
+    &.slide-right {
+        transform: translateX(-60px);
+    }
+    
+    // Scale animations
+    &.scale-up {
+        transform: scale(0.8);
+    }
+    
+    &.scale-down {
+        transform: scale(1.2);
+    }
+    
+    // Rotation animations
+    &.rotate {
+        transform: rotate(-10deg);
+    }
+    
+    // Delays
+    @for $i from 1 through 10 {
+        &.delay-#{$i} {
+            transition-delay: #{$i * 0.1}s;
+        }
+    }
+    
+    // Special fast-loading classes
+    &.immediate {
+        animation-duration: 0.4s;
+        transition-duration: 0.4s;
+        // Backup visibility
+        animation: forceVisible 0.01s 0.5s forwards;
+    }
+}
+
+.immediate {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+// Special element animations
+.project-card {
+    transition: transform 0.5s ease;
+    
+    &:hover {
+        transform: translateY(-10px);
+    }
+    
+    &__image-bg, &__video {
+        transition: transform 0.8s ease;
+    }
+    
+    &:hover &__image-bg,
+    &:hover &__video {
+        transform: scale(1.05);
+    }
+}
+
+// Banner animations
+.banner {
+    &__title, &__separator, &__subtitle, .social-links {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 1s forwards;
+    }
+    
+    &__title {
+        animation-delay: 0.2s;
+    }
+    
+    &__separator {
+        animation-delay: 0.4s;
+    }
+    
+    &__subtitle {
+        animation-delay: 0.6s;
+    }
+    
+    .social-links {
+        animation-delay: 0.8s;
+    }
+    
+    &__image {
+        opacity: 0;
+        transform: translateX(50px);
+        animation: fadeInRight 1s 0.6s forwards;
+    }
+}
+
+// Services page specific animations
+.services-feature {
+    &__icon {
+        transition: transform 0.3s ease;
+    }
+    
+    &:hover &__icon {
+        transform: translateY(-10px) scale(1.1);
+    }
+}
+
+// Keyframe animations
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes forceVisible {
+    to {
+        opacity: 1;
+        transform: none !important;
+    }
+}
+
+// Ensure all content becomes visible even without JS
+@media (prefers-reduced-motion: reduce) {
+    .animate {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+        animation: none !important;
+    }
+    
+    body {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}

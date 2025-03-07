@@ -1,0 +1,110 @@
+{{ define "main" }}
+<div class="about-page">
+    <!-- Video Header -->
+    <div class="video-header">
+        <video autoplay muted loop playsinline poster="{{ .Params.video_poster }}">
+            <source src="{{ .Params.video }}" type="video/mp4">
+        </video>
+        <div class="video-header__overlay">
+            <h1 class="video-header__title">Jadai is a designer who loves to tell a good story</h1>
+        </div>
+    </div>
+    
+    <!-- Info Section -->
+    <div class="about-info scroll-animate fade-up">
+        <div class="container">
+            <div class="about-info__grid">
+                <!-- Column 1: Profile -->
+                <div class="about-info__column scroll-animate-child">
+                    <div class="profile-image">
+                        <img src="{{ .Params.profile_image }}" alt="Jadai Kongolo">
+                    </div>
+                    <p class="profile-description">{{ .Params.personal_description }}</p>
+                </div>
+                
+                <!-- Column 2: About -->
+                <div class="about-info__column scroll-animate-child child-fade-up">
+                    <h2 class="about-info__title">{{ .Params.about_title }}</h2>
+                    <div class="about-info__text">
+                        <p>{{ .Params.about_description }}</p>
+                    </div>
+                </div>
+                
+                <!-- Column 3: Capabilities -->
+                <div class="about-info__column scroll-animate-child child-fade-up">
+                    <div class="capabilities">
+                        <h3 class="capabilities__title">DIGITAL CAPABILITIES</h3>
+                        <ul class="capabilities__list">
+                            {{ range .Params.digital_capabilities }}
+                            <li>{{ . }}</li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                    
+                    <div class="capabilities">
+                        <h3 class="capabilities__title">BRAND CAPABILITIES</h3>
+                        <ul class="capabilities__list">
+                            {{ range .Params.brand_capabilities }}
+                            <li>{{ . }}</li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                    
+                    <div class="capabilities">
+                        <h3 class="capabilities__title">CLIENTS & COLLABORATORS</h3>
+                        <ul class="capabilities__list">
+                            {{ range .Params.clients }}
+                            <li>{{ . }}</li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <hr class="about-separator">
+    
+    <!-- Contact Section -->
+    <div class="contact-section scroll-animate fade-up">
+        <div class="container">
+            <div class="contact-section__grid">
+                <!-- Column 1: Contact Title -->
+                <div class="contact-section__column">
+                    <h2 class="contact-section__title">Contact</h2>
+                </div>
+                
+                <!-- Column 2: Work Together -->
+                <div class="contact-section__column">
+                    <h3 class="contact-section__subtitle">LET'S WORK TOGETHER</h3>
+                    <a href="mailto:{{ .Params.contact_email }}" class="contact-link">{{ .Params.contact_email }}</a>
+                    <div class="contact-socials">
+                        {{ range .Params.socials }}
+                        <a href="{{ .url }}" target="_blank" class="contact-social-link">{{ .name }}</a>
+                        {{ end }}
+                    </div>
+                </div>
+                
+                <!-- Column 3: Experience -->
+                <div class="contact-section__column">
+                    <h3 class="contact-section__subtitle">EXPERIENCE</h3>
+                    <p class="experience-text">
+                        I've spent over 10 years working across digital design, art direction,
+                        and brand strategy with companies ranging from startups to industry leaders.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Blog Promo Section -->
+    <div class="blog-promo scroll-animate fade-up" style="background-image: url('{{ .Params.blog_image }}')">
+        <div class="blog-promo__overlay">
+            <div class="blog-promo__content">
+                <h3 class="blog-promo__title">WEEKLY PHOTOGRAPHY BLOG AT SARAKY.COM</h3>
+                <a href="{{ .Params.blog_url }}" class="btn-outline blog-promo__button">READ THE STORIES</a>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

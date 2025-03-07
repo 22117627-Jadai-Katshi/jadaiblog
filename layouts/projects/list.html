@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="work-page">
+    <section class="work-hero">
+        <div class="container">
+            <h1 class="work-hero__title animate fade-in immediate">{{ .Params.headline }}</h1>
+            <p class="work-hero__subtitle animate fade-in immediate delay-1">{{ .Params.subtitle }}</p>
+        </div>
+    </section>
+
+    <section class="projects-grid immediate">
+        {{ range site.Data.featured_projects }}
+            {{ partial "project-card.html" . }}
+        {{ end }}
+    </section>
+</div>
+{{ end }}

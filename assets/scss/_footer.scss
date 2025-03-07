@@ -1,0 +1,71 @@
+.site-footer {
+    background-color: $bg-color;
+    padding: $spacing-xl 0;
+    
+    .footer-sections {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: $spacing-lg;
+      margin-bottom: $spacing-xl;
+      
+      @media (max-width: $breakpoint-md) {
+        grid-template-columns: 1fr;
+      }
+      
+      h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: $spacing-md;
+      }
+      
+      ul {
+        list-style: none;
+        
+        li {
+          margin-bottom: $spacing-sm;
+        }
+      }
+    }
+    
+    .subscribe-form {
+      display: flex;
+      margin-top: $spacing-md;
+      
+      input {
+        flex: 1;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: none;
+        color: $text-color;
+        
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.5);
+        }
+      }
+      
+      .btn-submit {
+        background-color: $accent-color;
+        color: #000;
+        border: none;
+        padding: 10px 20px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+    }
+    
+    .copyright {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: $spacing-lg;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      
+      .social-links {
+        display: flex;
+        
+        a {
+          margin-left: $spacing-md;
+        }
+      }
+    }
+  }

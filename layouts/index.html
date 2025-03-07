@@ -1,0 +1,50 @@
+{{ define "main" }}
+<section class="banner scroll-animate fade-up">
+    <div class="banner__container">
+        <div class="banner__text">
+            <h1 class="banner__title">{{ .Params.bio }}</h1>
+            <div class="banner__separator"></div>
+            <p class="banner__subtitle">{{ .Params.subtitle }}</p>
+            <div class="social-links">
+                {{ range .Params.social_links }}
+                <a href="{{ .url }}" target="_blank" aria-label="{{ .name }}">
+                    <i class="fab fa-{{ .icon }}"></i>
+                </a>
+                {{ end }}
+            </div>
+        </div>
+        <div class="banner__image">
+            <img src="{{ .Params.profile_image }}" alt="Profile Image">
+        </div>
+    </div>
+</section>
+
+<div class="brand-showcase scroll-animate fade-up">
+    <div class="brand-showcase__decorative-line">
+        <span class="brand-showcase__corner">×</span>
+        <span class="brand-showcase__line"></span>
+        <span class="brand-showcase__corner">×</span>
+    </div>
+    
+    <div class="brand-showcase__content">
+        <p class="brand-showcase__label">featured by</p>
+        <div class="brand-showcase__logos">
+            {{ range .Params.featured_brands }}
+            <img src="{{ . }}" alt="Featured Brand" loading="lazy">
+            {{ end }}
+        </div>
+    </div>
+    
+    <div class="brand-showcase__decorative-line">
+        <span class="brand-showcase__corner">×</span>
+        <span class="brand-showcase__line"></span>
+        <span class="brand-showcase__corner">×</span>
+    </div>
+</div>
+
+<section class="projects-grid">
+    {{ range .Params.featured_projects }}
+        {{ partial "project-card.html" . }}
+    {{ end }}
+</section>
+{{ end }}

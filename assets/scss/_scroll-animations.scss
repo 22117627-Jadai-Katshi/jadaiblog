@@ -1,0 +1,77 @@
+// Base styles for scroll animations
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    // Different animation styles
+    &.fade-up {
+        transform: translateY(40px);
+    }
+    
+    &.fade-down {
+        transform: translateY(-40px);
+    }
+    
+    &.fade-left {
+        transform: translateX(-40px);
+    }
+    
+    &.fade-right {
+        transform: translateX(40px);
+    }
+    
+    &.zoom-in {
+        transform: scale(0.95);
+    }
+    
+    &.zoom-out {
+        transform: scale(1.05);
+    }
+}
+
+// Styles for child elements that animate after parent section
+.scroll-animate-child {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    // Variants for child animations
+    &.child-fade-up {
+        transform: translateY(20px);
+    }
+    
+    &.child-fade-left {
+        transform: translateX(-20px);
+    }
+    
+    &.child-fade-right {
+        transform: translateX(20px);
+    }
+    
+    &.child-zoom {
+        transform: scale(0.95);
+    }
+}
+
+// For standalone elements not part of sections
+.scroll-animate-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

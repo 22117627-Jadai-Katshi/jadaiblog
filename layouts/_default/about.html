@@ -1,0 +1,87 @@
+{{ define "main" }}
+<section class="about-hero">
+  <div class="container">
+    <h1>Kyson is a designer who loves to tell a good story.</h1>
+  </div>
+</section>
+
+<section class="about-content">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image">
+        <!-- Image of Kyson goes here -->
+        <img src="/images/kyson-profile.jpg" alt="Kyson Dana">
+      </div>
+      
+      <div class="about-text">
+        <h2>ABOUT KYSON DANA</h2>
+        <p>{{ .Content }}</p>
+      </div>
+      
+      <div class="skills-experience">
+        <div class="digital-expertise">
+          <h3>DIGITAL EXPERIENCE</h3>
+          <ul>
+            <li>Websites</li>
+            <li>iOS and Android Apps</li>
+            <li>Platforms</li>
+            <li>Research</li>
+            <li>E-commerce Design</li>
+          </ul>
+        </div>
+        
+        <div class="other-expertise">
+          <h3>OTHER EXPERIENCE</h3>
+          <ul>
+            <li>Art Direction</li>
+            <li>Photography</li>
+            <li>Post-Production</li>
+            <li>Campaigns</li>
+            <li>Positioning</li>
+            <li>Identity</li>
+          </ul>
+        </div>
+        
+        <div class="clients-list">
+          <h3>CLIENTS & COLLABORATORS</h3>
+          <ul>
+            <li>Tesla</li>
+            <li>SolarCity</li>
+            <li>Adobe</li>
+            <li>Forward</li>
+            <li>Boosted Boards</li>
+            <li>Slack</li>
+            <li>Figma</li>
+            <!-- Add more clients as needed -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="container">
+    <h2>Contact</h2>
+    <div class="contact-details">
+      <div>
+        <p>kyson@example.com</p>
+        <p>LinkedIn</p>
+        <p>VSCO</p>
+      </div>
+      
+      <div>
+        <h4>LET'S WORK TOGETHER</h4>
+        <ul class="roles">
+          <li>Art Director / Lead UI Designer</li>
+          <li>Freelance Photographer</li>
+          <li>Freelance Designer</li>
+          <li>Product Designer at Brand X</li>
+          <!-- Additional roles -->
+        </ul>
+        <a href="/resume.pdf" class="btn-download">Download Resume</a>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,132 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba($background-dark, 0.95);
+    padding: 20px 0;
+    
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    &__logo {
+        font-family: $font-heading;
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: $text-light;
+        text-decoration: none;
+        letter-spacing: 0.05em;
+        z-index: 1001; // Above the menu
+    }
+    
+    &__menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: $text-light;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 8px;
+        z-index: 1001; // Above the menu
+        
+        &.is-active {
+            color: $text-light;
+            
+            .fa-bars:before {
+                content: "\f00d"; // Change to X icon
+            }
+        }
+    }
+    
+    &__nav {
+        ul {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        a {
+            font-family: $font-heading;
+            color: $text-light;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: opacity 0.3s ease;
+            
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__menu-toggle {
+            display: block;
+        }
+        
+        &__nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba($background-dark, 0.98);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            transform: translateY(-100%);
+            
+            &.is-active {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+            
+            ul {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 32px;
+            }
+            
+            li {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: all 0.4s ease;
+                transition-delay: 0.1s;
+            }
+            
+            &.is-active li {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            
+            a {
+                font-size: 24px;
+                display: block;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+// Prevent scrolling when menu is open
+body.menu-open {
+    overflow: hidden;
+}

@@ -1,0 +1,23 @@
+baseURL = "https://example.com/"
+languageCode = "en-us"
+title = "Jadai Kongolo"
+theme = "jadaiblog"
+
+[menu]
+  [[menu.main]]
+    name = "HOME"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "WORK"
+    url = "/projects/"
+    weight = 2
+  [[menu.main]]
+    name = "SERVICES"
+    url = "/services/"
+    weight = 3
+  [[menu.main]]
+    name = "ABOUT"
+    url = "/about/"
+    weight = 4
+  # Contact menu item removed as requested

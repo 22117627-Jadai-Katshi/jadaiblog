@@ -1,0 +1,237 @@
+@import "variables";
+
+// Color variables
+$background-dark: #000000;
+$text-light: #FFFFFF;
+$accent-blue: #007BFF;
+
+// Reset and base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-primary;
+  background-color: $background-dark;
+  color: $text-light;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.banner {
+  padding: 120px 0;
+  
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    padding: 0 20px;
+  }
+  
+  &__text {
+    flex: 1;
+    text-align: left;
+    padding: 0;
+  }
+  
+  &__title {
+    font-family: $font-heading;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: 0.01em;
+  }
+  
+  &__separator {
+    width: 60px;
+    height: 2px;
+    background-color: $text-light;
+    margin-bottom: 24px;
+  }
+  
+  &__subtitle {
+    font-family: $font-secondary;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    opacity: 0.9;
+  }
+  
+  &__image {
+    width: 45%;
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    padding: 0;
+    
+    &__container {
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+      height: 100vh;
+      min-height: 500px;
+    }
+    
+    &__text {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,0.4) 50%,
+        rgba(0,0,0,0.7) 100%
+      ); // Gradient focused at bottom for text readability
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; // Move text to bottom
+      align-items: flex-start; // Keep left alignment
+      padding: 30px;
+      padding-bottom: 40px; // Extra padding at bottom
+      width: 100%;
+      height: 100%;
+    }
+    
+    &__title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    
+    &__subtitle {
+      margin-bottom: 24px;
+    }
+    
+    &__image {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}
+
+.social-links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-bottom: 0;
+  align-items: center;
+  
+  a {
+    color: $text-light;
+    font-size: 1.5rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    
+    &:hover {
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    margin-top: 20px; // Space after subtitle
+    margin-bottom: 0;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    width: 100%; // Full width to keep alignment consistent
+    padding-bottom: 10px; // Space at bottom
+  }
+}
+
+.brand-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 40px 0;
+  margin-bottom: 80px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  
+  img {
+    height: 30px;
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+  }
+  
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 20px;
+    
+    img {
+      height: 24px;
+    }
+  }
+}
+
+.projects-section {
+  width: 100%;
+  padding: 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding: 40px 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+// Import component styles
+@import "header";
+@import "footer";
+@import "home";
+@import "projects";
+@import "about";
+@import "brands";
+@import "work";
+@import "services";
+@import "animations";
+@import "scroll-animations";
+@import "responsive";

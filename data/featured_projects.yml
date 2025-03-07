@@ -1,0 +1,51 @@
+- title: "BRANDING AN ELECTRIC TRANSPORTATION CO."
+  role: "ART DIRECTOR"
+  description: "I lead the creative team at Boosted managing their brand, web design, photography, and filmmaking"
+  image: "/images/projects/okiapp.png"
+  #company_logo: "/images/logos/boosted-white.svg"
+  url: "/projects/carver"
+
+- title: "DESIGNING RIVIAN'S DIGITAL BRAND EXPERIENCE"
+  role: "DESIGN LEAD"
+  description: "Creating the digital presence for an innovative electric vehicle company"
+  image: "/videos/showreel.mp4" # Video file instead of image
+  #company_logo: "/images/logos/rivian-white.svg"
+  url: "/projects/rivian"
+
+- title: "LEADING DESIGN FOR BOOSTED'S WEBSITE"
+  role: "UX DESIGNER"
+  description: "Reimagining the digital storefront for electric skateboards"
+  image: "/images/projects/newsletter.png"
+  #company_logo: "/images/logos/boosted-white.svg"
+  layout: "grid"
+  url: "/projects/boosted-website"
+
+- title: "DESIGNING A CAMPAIGN FOR REV"
+  role: "ART DIRECTOR"
+  description: "Launching a revolutionary electric scooter to the world"
+  image: "/images/projects/okiapp.png"
+  #company_logo: "/images/logos/boosted-white.svg"
+  url: "/projects/boosted-rev"
+
+- title: "WHERE GREAT TRAVEL MEETS PHOTOGRAPHY"
+  role: "LEAD DESIGNER"
+  description: "Creating a platform for travelers and photographers to share their experiences"
+  image: "/videos/showreel.mp4"
+  #company_logo: "/images/logos/moment-white.svg"
+  url: "/projects/moment"
+
+- title: "IMPROVING WORKPLACE COMMUNICATION"
+  role: "PRODUCT DESIGNER"
+  description: "Redesigning how teams collaborate and communicate"
+  image: "/images/projects/newsletter.png"
+  #company_logo: "/images/logos/kore-white.svg"
+  url: "/projects/kore"
+
+- title: "NEW BOOSTED PRODUCT LAUNCH 2018"
+  role: "CAMPAIGN DESIGNER"
+  description: "Creating buzz and excitement for the latest innovation"
+  image: "/videos/showreel.mp4"
+  #company_logo: "/images/logos/boosted-white.svg"
+  url: "/projects/boosted-launch"
+
+

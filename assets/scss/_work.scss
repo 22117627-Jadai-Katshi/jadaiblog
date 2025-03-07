@@ -1,0 +1,45 @@
+.work-page {
+    padding-top: 120px; // Space for fixed header
+    background-color: $background-dark;
+}
+
+.work-hero {
+    padding: 120px 0;
+    text-align: center;
+    
+    &__title {
+        font-family: $font-heading;
+        font-size: 84px;
+        font-weight: 700;
+        color: $text-light;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        -webkit-text-stroke: 1px rgba(255,255,255,0.1);
+        text-shadow: 0 0 20px rgba(0,0,0,0.3);
+        
+        @media (max-width: 768px) {
+            font-size: 48px;
+        }
+    }
+    
+    &__subtitle {
+        font-family: $font-secondary;
+        font-size: 18px;
+        line-height: 1.6;
+        color: $text-light;
+        max-width: 800px;
+        margin: 0 auto;
+        opacity: 0.9;
+        
+        @media (max-width: 768px) {
+            font-size: 16px;
+            padding: 0 20px;
+        }
+    }
+    
+    // ...existing animation styles...
+}
+
+// ...existing responsive styles...
