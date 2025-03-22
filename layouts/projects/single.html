@@ -1,35 +1,172 @@
 {{ define "main" }}
-<article class="project-single">
-  <header class="project-header">
-    <div class="container">
-      <span class="project-category">{{ .Params.category }}</span>
-      <h1 class="project-title">{{ .Title }}</h1>
-      <p class="project-description">{{ .Params.description }}</p>
-    </div>
-  </header>
-  
-  <div class="project-content">
-    <div class="container">
-      {{ .Content }}
-    </div>
-  </div>
-  
-  <div class="project-navigation">
-    <div class="container">
-      {{ with .PrevInSection }}
-      <a href="{{ .Permalink }}" class="prev-project">
-        <span>Previous Project</span>
-        <h3>{{ .Title }}</h3>
-      </a>
-      {{ end }}
-      
-      {{ with .NextInSection }}
-      <a href="{{ .Permalink }}" class="next-project">
-        <span>Next Project</span>
-        <h3>{{ .Title }}</h3>
-      </a>
-      {{ end }}
-    </div>
-  </div>
-</article>
+<div class="project-detail">
+    <!-- Hero Section with Project Info -->
+    <section class="project-hero">
+        <div class="project-hero__background" style="background-image: url({{ .Page.Params.intro_image }});">
+            <div class="project-hero__overlay"></div>
+        </div>
+        <div class="project-hero__content">
+            <div class="container">
+                <div class="project-hero__info">
+                    <div class="project-hero__column">
+                        <h5 class="project-hero__label">PROJECT</h5>
+                        <h1 class="project-hero__title">{{ .Title }}</h1>
+                    </div>
+                    
+                    <div class="project-hero__column">
+                        <h5 class="project-hero__label">SUMMARY</h5>
+                        <p class="project-hero__summary">{{ .Page.Params.intro_description }}</p>
+                    </div>
+                    
+                    <div class="project-hero__column">
+                        <h5 class="project-hero__label">RESPONSIBILITIES</h5>
+                        <ul class="project-hero__responsibilities">
+                            {{ range .Page.Params.responsibilities }}
+                                <li>{{ . }}</li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section (Light) -->
+    <section class="project-section project-section--light">
+        <div class="container">
+            <div class="project-section__grid">
+                <div class="project-section__content">
+                    <h2 class="project-section__title">{{ .Page.Params.intro_title }}</h2>
+                    <p class="project-section__text">{{ .Page.Params.intro_description }}</p>
+                    <div class="project-section__timeline">
+                        <span class="project-section__timeline-label">Timeline:</span>
+                        <span class="project-section__timeline-text">{{ .Page.Params.timeline }}</span>
+                    </div>
+                </div>
+                <div class="project-section__media">
+                    <img src="{{ .Page.Params.intro_image }}" alt="Project Introduction" class="project-section__image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Showcase Section (Dark) -->
+    <section class="project-section project-section--dark">
+        <div class="container">
+            <h2 class="project-section__title">{{ .Page.Params.visual_title }}</h2>
+            <p class="project-section__text">{{ .Page.Params.visual_description }}</p>
+            
+            <div class="project-gallery">
+                {{ range .Page.Params.visual_images }}
+                    <div class="project-gallery__item">
+                        <img src="{{ . }}" alt="Project Visual" class="project-gallery__image">
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Process Section (Light) -->
+    <section class="project-section project-section--light">
+        <div class="container">
+            <div class="project-section__grid project-section__grid--reverse">
+                <div class="project-section__content">
+                    <h2 class="project-section__title">{{ .Page.Params.process_title }}</h2>
+                    <p class="project-section__text">{{ .Page.Params.process_description }}</p>
+                </div>
+                <div class="project-section__media">
+                    <img src="{{ .Page.Params.process_image }}" alt="Design Process" class="project-section__image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mood Board Section (Dark) -->
+    <section class="project-section project-section--dark">
+        <div class="container">
+            <h2 class="project-section__title">{{ .Page.Params.mood_title }}</h2>
+            <p class="project-section__text">{{ .Page.Params.mood_description }}</p>
+            
+            <div class="project-mood-board">
+                {{ range .Page.Params.mood_images }}
+                    <div class="project-mood-board__item">
+                        <img src="{{ . }}" alt="Mood Board Image" class="project-mood-board__image">
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <!-- Typography and Colors Section (Light) -->
+    <section class="project-section project-section--light">
+        <div class="container">
+            <h2 class="project-section__title">{{ .Page.Params.typography_title }}</h2>
+            <p class="project-section__text">{{ .Page.Params.typography_description }}</p>
+            
+            <div class="project-style-guide">
+                {{ range .Page.Params.style_images }}
+                    <div class="project-style-guide__item">
+                        <img src="{{ . }}" alt="Style Guide Element" class="project-style-guide__image">
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <!-- Website Mockups Section (Dark) -->
+    <section class="project-section project-section--dark">
+        <div class="container">
+            <h2 class="project-section__title">{{ .Page.Params.mockups_title }}</h2>
+            <p class="project-section__text">{{ .Page.Params.mockups_description }}</p>
+            
+            <div class="project-mockups">
+                {{ range .Page.Params.mockup_images }}
+                    <div class="project-mockups__item">
+                        <img src="{{ . }}" alt="Website Mockup" class="project-mockups__image">
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Visuals Section (Dark) -->
+    <section class="project-section project-section--dark">
+        <div class="container">
+            <h2 class="project-section__title">{{ .Page.Params.final_title }}</h2>
+            <p class="project-section__text">{{ .Page.Params.final_description }}</p>
+            
+            <div class="project-final">
+                {{ range .Page.Params.final_images }}
+                    <div class="project-final__item">
+                        <img src="{{ . }}" alt="Final Visual" class="project-final__image">
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion Section (Light) -->
+    <section class="project-section project-section--light">
+        <div class="container">
+            <div class="project-conclusion">
+                <h2 class="project-section__title">{{ .Page.Params.conclusion_title }}</h2>
+                <p class="project-section__text project-section__text--large">{{ .Page.Params.conclusion_description }}</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Next Project Navigation -->
+    <section class="project-navigation">
+        <div class="container">
+            <a href="/projects" class="project-navigation__back">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+            {{ with .NextInSection }}
+            <a href="{{ .Permalink }}" class="project-navigation__next">
+                Next Project: {{ .Title }} <i class="fas fa-arrow-right"></i>
+            </a>
+            {{ end }}
+        </div>
+    </section>
+</div>
 {{ end }}
